@@ -1,5 +1,5 @@
+from msilib.schema import ListView
 from django.urls import reverse_lazy
-from django.views.generic.edit import ListView
 from django.views.generic.edit import CreateView
 from django.views.generic.edit import DetailView
 from django.views.generic.edit import UpdateView

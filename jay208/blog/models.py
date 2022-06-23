@@ -27,6 +27,11 @@ class post(models.Model):
     class Meta:
         ordering = ("-publish",)
         
+        def save(self, *args, **kwargs):
+            self.slug = slugify(self.title)
+            super().save(*args, **kwargs)
+            pass
+        
         def __str__(self):
             return self.title
             
